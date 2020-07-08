@@ -3,6 +3,9 @@
 *.mypy_cache/**
 *.pyc
 
+# Django
+db.sqlite3
+
 # other
 *.swp
 
