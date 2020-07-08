@@ -25,7 +25,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY", 'g_5!l3$5afuyd5h4=b5(6-f^!sm!bb)6wbe9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(',') or []
+ALLOWED_HOSTS = list(filter(lambda x: x if bool(x) else None,
+                            os.environ.get("ALLOWED_HOSTS", "").split(','))
+                     ) or ['127.0.0.1', 'localhost']
 
 
 # Application definition
