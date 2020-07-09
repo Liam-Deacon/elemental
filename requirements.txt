@@ -1,2 +1,5 @@
 django
 djangorestframework
+django-filter
+djangorestframework-queryfields
+django-computedfields
