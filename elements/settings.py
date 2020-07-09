@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRET_KEY", 'g_5!l3$5afuyd5h4=b5(6-f^!sm!bb)6wbe9q$w-1l07y+5!n%')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(eval(os.environ.get('DEBUG', '') or '0'))
 
 ALLOWED_HOSTS = list(filter(lambda x: x if bool(x) else None,
                             os.environ.get("ALLOWED_HOSTS", "").split(','))
@@ -57,6 +57,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'elements.urls'
 
+APPEND_SLASH = False
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -87,7 +89,7 @@ DATABASES = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
 
 # Password validation
