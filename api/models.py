@@ -1,14 +1,18 @@
 from django.db import models
 from computedfields.models import computed, ComputedFieldsModel
+from json_field import JSONField
+
 
 class Group(models.Model):
     number = models.IntegerField(unique=True, primary_key=True, default=1)
     name = models.CharField(unique=True, max_length=15, null=True)
+    description = models.CharField(max_length=10000)
 
 
 class Period(models.Model):
     number = models.IntegerField(unique=True, primary_key=True, default=1)
     name = models.CharField(unique=True, max_length=15, null=True)
+    description = models.CharField(max_length=10000)
 
 
 class Orbital(models.Model):
@@ -21,6 +25,8 @@ class Orbital(models.Model):
 
 class Block(models.Model):
     name = models.CharField(max_length=1)
+    description = models.CharField(max_length=10000)
+    groups = JSONField()
 
 
 class CrystalStructure(models.Model):
