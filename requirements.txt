@@ -3,3 +3,4 @@ djangorestframework
 django-filter
 djangorestframework-queryfields
 django-computedfields
+django-json-field
