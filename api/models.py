@@ -1,6 +1,6 @@
 from django.db import models
 from computedfields.models import computed, ComputedFieldsModel
-from json_field import JSONField
+from jsonfield import JSONField
 
 
 class Group(models.Model):

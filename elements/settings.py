@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'computedfields',
-    'json_field',
+    'jsonfield',
     'api.apps.ApiConfig',  # REST API app
 ]
 
