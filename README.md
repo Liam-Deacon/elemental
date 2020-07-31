@@ -11,7 +11,7 @@ lend itself to easily being copied.
 Elemental aims to change this! By providing a REST API to getting chemical and physical data it allows
 the opportunity to integrate with data pipelines or assists in creating your own front-end visualisations.
 
-The API can be tested at [elemental.lightbytestechnology.co.uk/api](elemental.lightbytestechnology.co.uk/api) 
+The API can be tested at [elemental.lightbytestechnology.co.uk/api](https://elemental.lightbytestechnology.co.uk/api) 
 
 ### REST API endpoints
 
